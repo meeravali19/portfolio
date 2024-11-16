@@ -1,6 +1,8 @@
+
 const pagrTurnBtn=document.querySelectorAll('.nextprev-btn');
 
 pagrTurnBtn.forEach((el,index) =>{
+     
     el.onclick =() =>{
         const pageTurnId =el.getAttribute('data-page');
         const pageTrun =document.getElementById(pageTurnId);
@@ -37,6 +39,7 @@ contantMeBtn.onclick =() =>{
 
 
 let totalPages = pages.length;
+console.log(totalPages)
 let pageNumber = 0;
 
 function reverseIndex() {
@@ -57,7 +60,7 @@ backProfileBtn.onclick = () => {
             setTimeout(() => {
                 reverseIndex();
                 pages[pageNumber].style.zIndex = 10 + index;
-            },500);
+            },700);
             
         }, (index + 1) * 200 + 100);
     });
@@ -86,7 +89,7 @@ pages.forEach((_, index) => {
         setTimeout(() => {
             reverseIndex();
             pages[pageNumber].style.zIndex = 10 + index;
-        },500);
+        },900);
         
     }, (index + 1) * 200 + 2100);
 })
